@@ -9,8 +9,7 @@ The nonprofit foundation Alphabet Soup wants a tool that can help it select the 
 ## Summary Report
 
 ### Overview of the Analysis
-* The purpose of this analysis is to create a neural network model to predict whether applicants will![image](https://github.com/gialiubc/deep-learning-challenge/assets/141379548/12ec5d6e-305a-4b5d-9d5d-f1eb9b36ba93)
- be successful if funded by Alphabet Soup.
+* The purpose of this analysis is to create a neural network model to predict whether applicants will be successful if funded by Alphabet Soup.
 
 * The dataset contains 34,299 instances and 12 features, the features includes:
 * ![image](https://github.com/gialiubc/deep-learning-challenge/assets/141379548/88a86487-3083-4be8-b1ec-eaf58af74d9c)
@@ -20,13 +19,13 @@ The nonprofit foundation Alphabet Soup wants a tool that can help it select the 
 
 * The analysis is conducted in the following stages:
   * Stage 1, processing the data. We study the dataset, including the data type, the features and each feature's unique count etc. There are eight out of twelve object data type and we use `get_dummies` need to transfrom them into binary symbols. We also reduce the unique value of each feature by cutting and bining those as `other`. Then we concate the feature dummies together with the numerical features and create the new data frame. We label the `IS_SUCCESSFUL` column as `y` and the rest of the features as `X`. Then, we scale and split the dataset into training set and testing set;
-  * 
+  
   * Stage 2, we set up the neural network model. We set up the initial model as follow:
   *![image](https://github.com/gialiubc/deep-learning-challenge/assets/141379548/97678ca8-686d-440d-97af-a7f5b68e73d1)
   * we use `relu` and  `sigmoid` as activation function for hidden layer and output layer respectively. We fit and train the model with X scaled and y training set.
-  * 
+    
   * Stage 3, we evaluate the model's performance. We calculate the `model_loss` and the `model_accuracy`. 
-  * 
+    
   * Stage 4, we save the model.
 
 ### Results
@@ -42,7 +41,6 @@ The nonprofit foundation Alphabet Soup wants a tool that can help it select the 
     - The first layer has 80 neurons with `relu` as activation function, because we want to checkout more connections between neurons and we use `relu` because it's simple and fast for non-linear model.
     - The second layer has 30 neurons with `relu` as activation function, because we want to focus on more weighted connections;
     - The output layer has 1 neuron with `sigmoid` as activation function, because we want a single output and it should be 0 or 1.
-    - 
   - Were you able to achieve the target model performance?
     - No.
   - What steps did you take in your attempts to increase model performance?
